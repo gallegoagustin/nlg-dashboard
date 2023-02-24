@@ -20,25 +20,27 @@ export const TableDashboard = () => {
 				<div className={styles.table_header__title}>Jobs</div>
 				<span>icon</span>
 			</div>
-			<table className={styles.styled_table}>
-				<thead>
-					<tr>
-						{heading.map((row, index) => (
-							<th key={`${index}-row`}>{row}</th>
+			<div>
+				<table className={styles.styled_table}>
+					<thead>
+						<tr>
+							{heading.map((row, index) => (
+								<th key={`${index}-row`}>{row}</th>
+							))}
+						</tr>
+					</thead>
+					<tbody>
+						{fakeData.map((row, index) => (
+							<tr key={`${index}-row`}>
+								<td>{row.job_type}</td>
+								<td>{row.requested_date}</td>
+								<td>{row.address}</td>
+								<td>{row.job_type}</td>
+							</tr>
 						))}
-					</tr>
-				</thead>
-				<tbody>
-					{
-						fakeData.map((row, index)=> <tr key={`${index}-row`}>
-							<td>{row.job_type}</td>
-							<td>{row.requested_date}</td>
-							<td>{row.address}</td>
-							<td>{row.job_type}</td>
-						</tr>)
-					}
-				</tbody>
-			</table>
+					</tbody>
+				</table>
+			</div>
 		</div>
 	)
 }
