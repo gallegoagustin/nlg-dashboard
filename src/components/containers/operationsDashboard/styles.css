@@ -50,3 +50,22 @@
 		box-shadow: 0 25px 50px -12px #673ab888;
 	}
 }
+
+.grid_container {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 1rem;
+	margin: 2rem 0;
+}
+
+.grid_container__cards{
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	gap: 1rem;
+}
+
+.table_container {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 1rem;
+}
