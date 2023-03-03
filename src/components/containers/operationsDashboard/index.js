@@ -1,5 +1,5 @@
 import { h } from 'preact'
-import { CardDashboard, TableDashboard } from '../../common'
+import { CardDashboard, Datepicker, TableDashboard } from '../../common'
 
 import style from './styles.css'
 
@@ -8,9 +8,17 @@ const arrCards = [...Array(6).keys()].map((i) => i + 1)
 export const OperationsDashboard = ({ title }) => {
 	return (
 		<div>
-			<div className={style.grid_container}>
+			<div
+				style={{
+					display: 'flex',
+					width: '50%',
+					justifyContent: 'space-between',
+				}}
+			>
 				<h1>{title}</h1>
-				<h3>Select</h3>
+				<Datepicker />
+			</div>
+			<div className={style.grid_container}>
 				<div className={style.grid_container__cards}>
 					{arrCards.map((card, index) => (
 						<CardDashboard title={'Late pending'} key={`${index}-index`} />
