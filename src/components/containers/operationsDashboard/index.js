@@ -25,6 +25,7 @@ export const OperationsDashboard = ({ title }) => {
 					))}
 				</div>
 				<div className={style.table_container}>
+					{/* TODO pasar por props la data a cada tabla */}
 					<TableDashboard />
 					<TableDashboard />
 				</div>
