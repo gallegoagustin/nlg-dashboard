@@ -1,7 +1,5 @@
-import { h } from 'preact'
-import { CardDashboard, Datepicker, TableDashboard } from '../../common'
-
-import style from './styles.css'
+import { TableDashboard } from './tableDashboard';
+import { CardDashboard } from './cardDashboard';
 
 const arrCards = [...Array(6).keys()].map((i) => i + 1)
 
@@ -16,15 +14,14 @@ export const OperationsDashboard = ({ title }) => {
 				}}
 			>
 				<h1>{title}</h1>
-				<Datepicker />
 			</div>
-			<div className={style.grid_container}>
-				<div className={style.grid_container__cards}>
+			<div className="grid_container">
+				<div className="grid_container__cards">
 					{arrCards.map((card, index) => (
 						<CardDashboard title={'Late pending'} key={`${index}-index`} />
 					))}
 				</div>
-				<div className={style.table_container}>
+				<div className="table_container">
 					{/* TODO pasar por props la data a cada tabla */}
 					<TableDashboard />
 					<TableDashboard />

@@ -1,5 +1,4 @@
 import { fakeData } from './data'
-import styles from './index.css'
 
 export const TableDashboard = () => {
 	const heading = ['Reference', 'Requested Date', 'Address', 'Jobs Types']
