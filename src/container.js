@@ -5,7 +5,7 @@ export default function Container() {
   return (
     <div className="dashboard-container">
       <p>container</p>
-      <OperationsDashboard className="operations-dashboard" ></OperationsDashboard>
+      <OperationsDashboard className="operations-dashboard" />
     </div>
   )
 }

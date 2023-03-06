@@ -3,7 +3,7 @@ import { fakeData } from './data'
 export const TableDashboard = () => {
 	const heading = ['Reference', 'Requested Date', 'Address', 'Jobs Types']
 	return (
-		<div className={styles.table_container}>
+		<div>
 			<div
 				style={{
 					display: 'flex',
@@ -16,11 +16,11 @@ export const TableDashboard = () => {
 					borderRadius: '6px 6px 0px 0px',
 				}}
 			>
-				<div className={styles.table_header__title}>Jobs</div>
+				<div>Jobs</div>
 				<span>icon</span>
 			</div>
 			<div>
-				<table className={styles.styled_table}>
+				<table>
 					<thead>
 						<tr>
 							{heading.map((row, index) => (
