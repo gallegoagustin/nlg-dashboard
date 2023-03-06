@@ -4,8 +4,7 @@ import './index.css';
 export default function Container() {
   return (
     <div className="dashboard-container">
-      <p>container</p>
-      <OperationsDashboard className="operations-dashboard" ></OperationsDashboard>
+      <OperationsDashboard title={'Operations Dashboard'}></OperationsDashboard>
     </div>
   )
 }

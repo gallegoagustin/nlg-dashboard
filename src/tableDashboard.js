@@ -1,26 +1,21 @@
 import { fakeData } from './data'
 
-export const TableDashboard = () => {
-	const heading = ['Reference', 'Requested Date', 'Address', 'Jobs Types']
+export const TableDashboard = ({tableTitle, extendScreen}) => {
+	const heading = ['Client', 'Requested Date', 'Address', 'Job Type']
+	const firstFiveEntries = fakeData.slice(0, 5);
 	return (
-		<div className={styles.table_container}>
-			<div
-				style={{
-					display: 'flex',
-					justifyContent: 'space-between',
-					alignItems: 'center',
-					backgroundColor: '#08548b',
-					color: 'white',
-					height: '30px',
-					padding: '1em',
-					borderRadius: '6px 6px 0px 0px',
-				}}
-			>
-				<div className={styles.table_header__title}>Jobs</div>
-				<span>icon</span>
+		<div>
+			<div className='table-header'>
+				<div className='table_header__title'>{tableTitle}</div>
+				{ extendScreen && (
+					<div className='table-header-full-screen'>
+					<h1 className='amount-of'>999</h1>
+					<img className='fullscreen-svg' src='./assets/fullscreen.svg' alt='view-full-screen'/>
+				</div>
+				)}
 			</div>
 			<div>
-				<table className={styles.styled_table}>
+				<table className='styled_table'>
 					<thead>
 						<tr>
 							{heading.map((row, index) => (
@@ -29,7 +24,7 @@ export const TableDashboard = () => {
 						</tr>
 					</thead>
 					<tbody>
-						{fakeData.map((row, index) => (
+						{firstFiveEntries.map((row, index) => (
 							<tr key={`${index}-row`}>
 								<td>{row.job_type}</td>
 								<td>{row.requested_date}</td>

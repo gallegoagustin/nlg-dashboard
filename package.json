@@ -12,6 +12,7 @@
   },
   "eslintConfig": {
     "extends": "preact",
+    "plugins": ["@babel"],
     "ignorePatterns": [
       "build/"
     ]

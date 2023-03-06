@@ -1,21 +1,16 @@
 import { LineChart } from './lineChart'
 
-export const CardDashboard = ({ title }) => {
+export const CardDashboard = ({ title, includesGraphic }) => {
 	return (
 		<div className="cardWrapper">
 			<span className="title">{title}</span>
 			<p className="value">999</p>
-			<span className="percent">100%</span>
-			<div
-				style={{
-					width: '200px',
-					height: '150px',
-					marginTop: '16px',
-					backgroundColor: 'red',
-				}}
-			>
-				<LineChart />
-			</div>
+			{includesGraphic && (
+				<div className='graphic-container'>
+					<span className="percent">100%</span>
+					<LineChart />
+				</div>
+			)}
 		</div>
 	)
 }
