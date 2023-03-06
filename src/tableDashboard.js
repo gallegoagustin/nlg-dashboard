@@ -4,17 +4,17 @@ export const TableDashboard = ({tableTitle, extendScreen}) => {
 	const heading = ['Client', 'Requested Date', 'Address', 'Job Type']
 	const firstFiveEntries = fakeData.slice(0, 5);
 	return (
-		<div>
+		<div className='table-container'>
 			<div className='table-header'>
 				<div className='table_header__title'>{tableTitle}</div>
 				{ extendScreen && (
 					<div className='table-header-full-screen'>
-					<h1 className='amount-of'>999</h1>
-					<img className='fullscreen-svg' src='./assets/fullscreen.svg' alt='view-full-screen'/>
-				</div>
+						<h1 className='amount-of'>999</h1>
+						<img className='fullscreen-svg' src='./assets/fullscreen.svg' alt='view-full-screen'/>
+					</div>
 				)}
 			</div>
-			<div>
+			<div className='real-table-container'>
 				<table className='styled_table'>
 					<thead>
 						<tr>

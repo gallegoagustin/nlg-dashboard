@@ -4,10 +4,10 @@ export const CardDashboard = ({ title, includesGraphic }) => {
 	return (
 		<div className="cardWrapper">
 			<span className="title">{title}</span>
-			<p className="value">999</p>
+			<h1	className="value">999</h1>
 			{includesGraphic && (
 				<div className='graphic-container'>
-					<span className="percent">100%</span>
+					<span className="percent">⬆9999%</span>
 					<LineChart />
 				</div>
 			)}

@@ -3,14 +3,14 @@ import { CardDashboard } from './cardDashboard';
 
 // const arrCards = [...Array(6).keys()].map((i) => i + 1)
 
-export const OperationsDashboard = ({ title }) => {
+export const OperationsDashboardManager = ({ title }) => {
 	return (
-		<div>
-			<div className='title_container'>
-				<h1>{title}</h1>
+		<div className='operations-container'>
+			<div className='title-container'>
+				<h1 className='screen-title'>{title}</h1>
 			</div>
-			<div className="grid_container">
-				<div className="grid_container__cards">
+			<div className="data-container">
+				<div className="cards-container">
 					{/* {arrCards.map((card, index) => (
 						<CardDashboard title={'Late pending'} key={`${index}-index`} />
 					))} */}
@@ -21,7 +21,7 @@ export const OperationsDashboard = ({ title }) => {
 					<CardDashboard title={'Quality Control'} includesGraphic/>
 					<CardDashboard title={"Today's Booked jobs"}/>
 				</div>
-				<div className="table_container">
+				<div className="tables-container">
 					{/* TODO pasar por props la data a cada tabla */}
 					<TableDashboard tableTitle={'Unallocated Jobs'} extendScreen/>
 					<TableDashboard tableTitle={'Recently Viewed Jobs'}/>
