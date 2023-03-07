@@ -1,4 +1,8 @@
 .dashboard-container {
+	font-family: sans-serif;
+}
+
+.dashboard-container {
     width: 100%;
     height: 100%;
     color: #232323;
@@ -17,12 +21,9 @@
 	display: flex;
 	width: 100%;
 	height: 10%;
-	/* background-color: green; */
-	font-family: sans-serif;
 }
 
 .dashboard-container .screen-title {
-	font-family: sans-serif;
 	font-size: 20px;
 }
 
@@ -33,7 +34,6 @@
 	justify-content: space-around;
 	height: 90%;
 	width: 100%;
-	/* background-color: blue; */
 }
 
 .dashboard-container .cards-container {
@@ -42,7 +42,6 @@
 	flex-wrap: wrap;
 	width: 48.5%;
 	height: 100%;
-	/* background-color: red; */
 }
 
 .dashboard-container .cards-container-typist {
@@ -52,7 +51,6 @@
 	align-self: flex-start;
 	width: 48.5%;
 	height: 100%;
-	/* background-color: rgb(217, 157, 7); */
 }
 
 .dashboard-container .tables-container {
@@ -62,8 +60,6 @@
 	height: 100%;
 	justify-content: center;
 	align-items: center;
-	/* margin: 2%; */
-	/* background-color: yellow; */
 }
 
 .dashboard-container .cardWrapper {
@@ -86,7 +82,6 @@
 
 
 .dashboard-container .title {
-	font-family: sans-serif;
 	margin-top: 5%;
 	color: #424949;
 	font-weight: 500;
@@ -94,13 +89,11 @@
 }
 
 .dashboard-container .value {
-	font-family: sans-serif;
 	font-size: 24px;
 	font-weight: 600;
 }
 
 .dashboard-container .percent {
-	font-family: sans-serif;
 	color: #4fac6b;
 	font-size: 16px;
 	font-weight: 500;
@@ -114,45 +107,34 @@
 	width: 95%;
 	height: 60%;
 	margin-bottom: 5%;
-	/* background-color: violet; */
 }
 
 .dashboard-container .table-container {
 	display: flex;
 	flex-direction: column;
-	/* background-color: yellowgreen; */
 	padding: 1%;
 }
 
 .dashboard-container .table-header {
-	font-family: sans-serif;
 	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	align-items: flex-end;
 	background-color: #08548b;
 	color: white;
-	height: 10%;
 	border-radius: 6px 6px 0px 0px ;
 }
 
 .dashboard-container .table_header__title {
-	display: flex;
     font-weight: 500;
     font-size: 16px;
-	margin-left: 1%;
-	margin-top: 2%;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1%;
 }
 
 .dashboard-container .table-header-full-screen {
 	display: flex;
-	flex-direction: row;
 	align-items: center;		
-	justify-content: space-between;
-	font-family: sans-serif;
-	/* background-color: red; */
-	border-radius: 6px 6px 0px 0px ;
-	margin-right: 1%;
 }
 
 .dashboard-container .amount-of {
@@ -169,11 +151,6 @@
 	filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(317deg) brightness(101%) contrast(102%);
 }
 
-/* .styled_table thead,
-.styled_table tbody {
-    display: block;
-} */
-
 .dashboard-container .real-table-container {
 	height: 90%;
 }
@@ -182,15 +159,13 @@
     border-collapse: collapse;
     background-color: white;
     font-size: 0.9em;
-	font-family: sans-serif;
+
     min-width: 350px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
 }
 
 .styled_table tbody {
     height: fit-content;
-    /* overflow-y: auto; */
-    /* overflow-x: hidden; */
 }
 
 .styled_table thead tr {

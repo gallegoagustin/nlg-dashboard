@@ -13,9 +13,9 @@ export default function Container() {
   }, [])
 
   return (
-    <div className="dashboard-container">
+    <div className="dashboard-container" style={{display: 'flex', flexDirection: 'column'}}>
       <OperationsDashboardManager title={'Operations Dashboard [Manager]'}></OperationsDashboardManager>
-      {/* <OperationsDashboardTypist title={'Operations Dashboard [Typist]'}></OperationsDashboardTypist> */}
+      <OperationsDashboardTypist title={'Operations Dashboard [Typist]'}></OperationsDashboardTypist>
     </div>
   )
 }
