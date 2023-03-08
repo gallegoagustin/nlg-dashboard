@@ -12,7 +12,7 @@ import './index.css';
 // Comment components depending on which one want to render.
 
 export default function Container() {
-  const [state, dispatch] = useReducer(reducer, initialState);
+	const [state, dispatch] = useReducer(reducer, initialState);
 
   const asyncFetch = async () => {
     const response = await getAsyncJobs();
@@ -30,7 +30,7 @@ export default function Container() {
 
   return (
     <div className="dashboard-container" style={{display: 'flex', flexDirection: 'column'}}>
-      {/* <OperationsDashboardManager title={'Operations Dashboard [Manager]'} /> */}
+      <OperationsDashboardManager title={'Operations Dashboard [Manager]'} data={state.data} />
       {/* <OperationsDashboardTypist title={'Operations Dashboard [Typist]'} /> */}
       {/* <OperationsDashboardFranchisee title={'Operations Dashboard [Franchisee Partner]'} /> */}
       {/* <OperationsDashboardDirectPartner title={'Operations Dashboard [Direct Partner]'} /> */}

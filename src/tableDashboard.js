@@ -1,8 +1,13 @@
-import { fakeData } from './data'
+import { useMemo } from 'preact/hooks';
 
-export const TableDashboard = ({tableTitle, extendScreen}) => {
+export const TableDashboard = ({tableTitle, extendScreen, filterFunction, data}) => {
 	const heading = ['Client', 'Requested Date', 'Address', 'Job Type']
-	const firstFiveEntries = fakeData.slice(0, 5);
+
+	const filteredData = useMemo(() => {
+		if (filterFunction) return filterFunction(data, null);
+		else return [];
+	}, [data])
+
 	return (
 		<div style={{ display: 'flex', flexDirection: 'column', height: '100%' }}>
 			<div className='table-header'>
@@ -24,7 +29,7 @@ export const TableDashboard = ({tableTitle, extendScreen}) => {
 						</tr>
 					</thead>
 					<tbody>
-						{firstFiveEntries.map((row, index) => (
+						{filteredData.map((row, index) => (
 							<tr key={`${index}-row`}>
 								<td>{row.job_type}</td>
 								<td>{row.requested_date}</td>
