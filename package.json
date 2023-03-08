@@ -10,6 +10,9 @@
     "lint": "eslint src",
     "test": "jest"
   },
+  "engines" : { 
+    "node" : "16"
+  },
   "eslintConfig": {
     "extends": "preact",
     "plugins": ["@babel"],
