@@ -6,7 +6,7 @@ export const TableDashboard = ({tableTitle, extendScreen}) => {
 	return (
 		<div className='table-container'>
 			<div className='table-header'>
-				<div className='table_header__title'>{tableTitle}</div>
+				<h1 className='table_header__title'>{tableTitle}</h1>
 				{ extendScreen && (
 					<div className='table-header-full-screen'>
 						<h1 className='amount-of'>999</h1>

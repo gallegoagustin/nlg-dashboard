@@ -19,7 +19,6 @@ export const OperationsDashboardTypist = ({ title }) => {
 					<CardDashboard title={'Completed Jobs'}/>
 				</div>
 				<div className="tables-container">
-					{/* TODO pasar por props la data a cada tabla */}
 					<TableDashboard tableTitle={'Recently Viewed Jobs'}/>
 				</div>
 			</div>
