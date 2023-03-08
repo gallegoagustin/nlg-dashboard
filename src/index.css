@@ -141,6 +141,7 @@
 	background-color: #08548c;
 	color: white;
 	border-radius: 6px 6px 0px 0px ;
+	align-items: center;
 }
 
 .dashboard-container .table_header__title {
@@ -181,8 +182,7 @@
 	/* font-size: 5px; */
 }
 
-.dashboard-container .all-messages {
-	margin-left: 10%;
+.dashboard-container .read-filter {
 	color: #08548b;
 	font-size: 12px;
 }
@@ -230,6 +230,8 @@
 }
 
 .dashboard-container .total-messages {
+	width: 15%;
+	height: 5%;
 	background-color: #fff;
 	color: #08548b;
 	border-radius: 3px;
@@ -299,7 +301,7 @@
 .dashboard-container .date {
 	width: 10%;
 	padding-left: 1%;
-	/* background-color:lightblue; */
+	background-color:lightblue;
 }
 
 .dashboard-container .subject {
@@ -336,13 +338,19 @@
 }
 
 .dashboard-container .eye-open-svg {
-	/* background-color: yellow; */
 	height: 20px;
 	width: 20px;
 	filter: invert(88%) sepia(3%) saturate(6%) hue-rotate(326deg) brightness(91%) contrast(87%);
 }
 
 .dashboard-container .eye-open-svg:hover {
+	cursor: pointer;
+	height: 20px;
+	width: 20px;
+	filter: invert(20%) sepia(36%) saturate(4492%) hue-rotate(188deg) brightness(94%) contrast(94%);
+}
+
+.dashboard-container .eye-open-svg-read {
 	cursor: pointer;
 	height: 20px;
 	width: 20px;
@@ -372,7 +380,7 @@
 	padding: 0 1% 1% 1%;
 }
 
-.dashboard-container .styled-table-msg {
+/* .dashboard-container .styled-table-msg {
     border-collapse: collapse;
     background-color: white;
     font-size: 0.8em;
@@ -382,7 +390,7 @@
 	height: 100%;
 	border-radius: 0 0 5px 5px;
 	padding: 0 1% 1% 1%;
-}
+} */
 
 .dashboard-container .styled-table-msg {
     border-collapse: collapse;

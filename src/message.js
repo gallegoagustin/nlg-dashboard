@@ -2,8 +2,14 @@ import { useState } from 'preact/hooks';
 
 export const Message = (props) => {
     const [viewMessage, setViewMessage] = useState(false);
+    const [read, setRead] = useState(false);
     const switchViewMessage = () => {
         setViewMessage(!viewMessage);
+    }
+    const markAsRead = () => {
+        setRead(!read);
+        props.isRead === !read;
+        console.log(props.isRead); 
     }
     return (
         <div className='message-container'>
@@ -34,7 +40,7 @@ export const Message = (props) => {
                 )}
             </div>
             <div className="eye-div">
-                <img className='eye-open-svg' src='./assets/eye-open.svg' alt='mark as read'/>
+                <img className={read ? 'eye-open-svg-read' : 'eye-open-svg'} src='./assets/eye-open.svg' alt='mark as read' onClick={() => markAsRead()}/>
             </div>
         </div>
     )

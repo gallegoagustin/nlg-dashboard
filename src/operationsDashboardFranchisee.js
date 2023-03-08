@@ -11,19 +11,25 @@ export const OperationsDashboardFranchisee = ({ title }) => {
 			</div>
 			<div className="data-container">
 				<div className="cards-container">
-					{/* {arrCards.map((card, index) => (
-						<CardDashboard title={'Late pending'} key={`${index}-index`} />
-					))} */}
-					<CardDashboard title={'Pending'} includesGraphic/>
-					<CardDashboard title={"Today's Booked jobs"} includesGraphic/>
-					<CardDashboard title={'Late Pending'} includesGraphic/>
-					<CardDashboard title={'Late Reports'} includesGraphic/>
-					<CardDashboard title={'Jobs Booked'} includesGraphic/>
-					<CardDashboard title={'Quality Control'} includesGraphic/>
+					<div style={{ width: '50%', display: 'flex', justifyContent: 'space-evenly', marginBottom: '0.5%' }}>
+						<CardDashboard title={'Pending'} includesGraphic/>
+						<CardDashboard title={"Today's Booked Jobs"} includesGraphic/>	
+						<CardDashboard title={'Late Pending'} includesGraphic/>
+					</div>
+					<div style={{ width: '50%', display: 'flex', paddingBottom: '0.5%' }}>
+						<TableDashboard tableTitle={'All Unasigned Jobs'} extendScreen/>
+					</div>
 				</div>
-				<div className="tables-container">
-					<TableDashboard tableTitle={'All Unassigned Jobs'} extendScreen/>
-					<TableDashboard tableTitle={'Recently Viewed Jobs'}/>
+				<div className="cards-container">
+					<div style={{ width: '50%', display: 'flex', justifyContent: 'space-evenly', marginTop: '0.5%' }}>
+						<CardDashboard title={'Late Reports'} includesGraphic/>
+						<CardDashboard title={'Jobs Booked'} includesGraphic/>
+						<CardDashboard title={'Quality Control'} includesGraphic/>
+					</div>
+					<div style={{ width: '50%', display: 'flex', paddingTop: '0.5%' }}>
+						<TableDashboard tableTitle={'Recently Viewed Jobs'}/>
+					</div>
+
 				</div>
 			</div>
 		</div>
