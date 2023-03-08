@@ -35,7 +35,7 @@ export default function Container() {
       {/* <OperationsDashboardFranchisee title={'Operations Dashboard [Franchisee Partner]'} /> */}
       {/* <OperationsDashboardDirectPartner title={'Operations Dashboard [Direct Partner]'} /> */}
       {/* <OperationsDashboardContactorPartner title={'Operations Dashboard [Contractor Partner]'} /> */}
-      <MessagesSection title={'Messages'}/>
+      {/* <MessagesSection title={'Messages'}/> */}
     </div>
   )
 }
