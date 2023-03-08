@@ -38,6 +38,19 @@ export const MessagesInbox = ({tableTitle}) => {
                     <Message date='12/09/1997'subject={firstFiveEntries[1].job_type} jobAdress={firstFiveEntries[1].address} sender={firstFiveEntries[1].clerk_name}/>
                     <Message date='26/08/2021'subject={firstFiveEntries[2].job_type} jobAdress={firstFiveEntries[2].address} sender={firstFiveEntries[2].clerk_name}/>
                     <Message date='09/06/2022'subject={firstFiveEntries[3].job_type} jobAdress={firstFiveEntries[3].address} sender={firstFiveEntries[3].clerk_name}/>
+                    <Message isRead={false} date='22/08/1990' subject={firstFiveEntries[0].job_type} jobAdress={firstFiveEntries[0].address} sender={firstFiveEntries[0].clerk_name}/>
+                    <Message date='12/09/1997'subject={firstFiveEntries[1].job_type} jobAdress={firstFiveEntries[1].address} sender={firstFiveEntries[1].clerk_name}/>
+                    <Message date='26/08/2021'subject={firstFiveEntries[2].job_type} jobAdress={firstFiveEntries[2].address} sender={firstFiveEntries[2].clerk_name}/>
+                    <Message date='09/06/2022'subject={firstFiveEntries[3].job_type} jobAdress={firstFiveEntries[3].address} sender={firstFiveEntries[3].clerk_name}/>
+                    <Message date='22/08/1990' subject={firstFiveEntries[0].job_type} jobAdress={firstFiveEntries[0].address} sender={firstFiveEntries[0].clerk_name}/>
+                    <Message date='12/09/1997'subject={firstFiveEntries[1].job_type} jobAdress={firstFiveEntries[1].address} sender={firstFiveEntries[1].clerk_name}/>
+                    <Message date='26/08/2021'subject={firstFiveEntries[2].job_type} jobAdress={firstFiveEntries[2].address} sender={firstFiveEntries[2].clerk_name}/>
+                    <Message date='09/06/2022'subject={firstFiveEntries[3].job_type} jobAdress={firstFiveEntries[3].address} sender={firstFiveEntries[3].clerk_name}/>
+                </div>
+                <div className='page-container'>
+                    <h3>1-20/99</h3>
+                    <img className='arrows' src='./assets/arrow-left.svg' alt='left'/>
+                    <img className='arrows' src='./assets/arrow-right.svg' alt='right'/>
                 </div>
             </div>
 		</div>
