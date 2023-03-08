@@ -2,6 +2,7 @@ export const initialState = {
     data: [],
     isLoading: false,
     dateRange: undefined,
+    userId: 54,
 };
   
 export const reducer = (state, action) => {

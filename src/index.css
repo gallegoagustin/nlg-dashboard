@@ -151,7 +151,7 @@
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	padding: 2%;
+	padding: 1% 2%;
 }
 
 .dashboard-container .table-header-full-screen {
@@ -401,9 +401,6 @@
 	width: 100%;
 }
 
-.styled_table tbody {
-    height: fit-content;
-}
 
 .styled_table thead tr {
     text-align: left;

@@ -25,14 +25,31 @@ export async function getAsyncJobs() {
     return [...fakeData];
 }
 
-export const getJobsFilteredByPartner = (arr, filter) => {
-    const filteredArray = arr.filter(item => item.selected_partner == filter);
+export const getJobsFilteredByPartner = (arr) => {
+    const filteredArray = arr.filter(item => item.selected_partner == null);
     const sortedArray = sortByPk(filteredArray)
     return sortedArray.slice(0, 5);
 }
 
-export const getJobsSortedByViewDate = (arr) => {
-    const sortedArray = sortByDate(arr, 'last_viewed_date');
-    const filteredArray = sortedArray.slice(0, 5);
-    return filteredArray;
+export const getJobsFilteredByClerk = (arr) => {
+    const filteredArray = arr.filter(item => item.clerk == null);
+    const sortedArray = sortByPk(filteredArray)
+    return sortedArray.slice(0, 5);
+}
+
+export const getJobsSortedByViewDate = (arr, userId) => {
+    const filteredArray = arr.filter(item => item.last_viewer === userId)
+    const sortedArray = sortByDate(filteredArray, 'last_viewed_date');
+    const cutArray = sortedArray.slice(0, 5);
+    return cutArray;
+}
+
+export const getUnallocatedJobsCounter = (arr) => {
+    const filteredArray = arr.filter(item => item.selected_partner == null);
+    return filteredArray.length;
+}
+
+export const getUnassignedJobsCounter = (arr) => {
+    const filteredArray = arr.filter(item => item.clerk == null);
+    return filteredArray.length;
 }

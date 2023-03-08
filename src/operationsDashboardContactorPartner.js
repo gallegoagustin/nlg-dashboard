@@ -1,9 +1,8 @@
 import { TableDashboard } from './tableDashboard';
 import { CardDashboard } from './cardDashboard';
+import { getJobsFilteredByClerk, getUnassignedJobsCounter, getJobsSortedByViewDate } from './getters';
 
-// const arrCards = [...Array(6).keys()].map((i) => i + 1)
-
-export const OperationsDashboardContactorPartner = ({ title }) => {
+export const OperationsDashboardContactorPartner = ({ title, data, userId }) => {
 	return (
 		<div className='operations-container'>
 			<div className='title-container'>
@@ -17,7 +16,7 @@ export const OperationsDashboardContactorPartner = ({ title }) => {
 						<CardDashboard title={'Late Pending'} includesGraphic/>	
 					</div>
 					<div style={{ width: '50%', display: 'flex', paddingBottom: '0.5%' }}>
-						<TableDashboard tableTitle={'All Unasigned Jobs'} extendScreen/>
+						<TableDashboard tableTitle={'All Unasigned Jobs'} extendScreen filterFunction={getJobsFilteredByClerk} counterFunction={getUnassignedJobsCounter} data={data} userId={userId} />
 					</div>
 				</div>
 				<div className="cards-container">
@@ -27,7 +26,7 @@ export const OperationsDashboardContactorPartner = ({ title }) => {
 						<CardDashboard title={'Quality Control'} includesGraphic/>
 					</div>
 					<div style={{ width: '50%', display: 'flex', paddingTop: '0.5%' }}>
-						<TableDashboard tableTitle={'Recently Viewed Jobs'}/>
+						<TableDashboard tableTitle={'Recently Viewed Jobs'} filterFunction={getJobsSortedByViewDate} data={data} userId={userId} />
 					</div>
 
 				</div>
