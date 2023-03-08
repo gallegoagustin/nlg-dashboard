@@ -1,5 +1,6 @@
 .dashboard-container {
-	font-family: sans-serif;
+	font-family: arboria, sans-serif;
+	font-weight: 400;
 }
 
 .dashboard-container {
@@ -24,13 +25,14 @@
 }
 
 .dashboard-container .screen-title {
+	font-family: news-gothic-std, sans-serif;
 	font-size: 20px;
 }
 
 .dashboard-container .data-container {
 	display: flex;
-	flex-direction: row;
-	align-items: center;
+	flex-direction: column;
+	align-items: top;
 	justify-content: space-around;
 	height: 90%;
 	width: 100%;
@@ -39,9 +41,7 @@
 .dashboard-container .cards-container {
 	display: flex;
 	flex-direction: row;
-	flex-wrap: wrap;
-	width: 48.5%;
-	height: 100%;
+	width: 100%;
 }
 
 .dashboard-container .cards-container-typist {
@@ -72,7 +72,6 @@
     color: #232323;
 	height: auto;
 	width: 30%;
-	margin: 1%;
     cursor: pointer;
 }
 
@@ -110,14 +109,13 @@
 }
 
 .dashboard-container .table-container {
-	display: flex;
-	flex-direction: column;
 	padding: 1%;
+	height: 100%;
 }
 
 .dashboard-container .table-header {
 	display: flex;
-	background-color: #08548b;
+	background-color: #08548c;
 	color: white;
 	border-radius: 6px 6px 0px 0px ;
 }
@@ -129,17 +127,18 @@
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	padding: 1%;
+	padding: 2%;
 }
 
 .dashboard-container .table-header-full-screen {
 	display: flex;
 	align-items: center;		
+	padding-right: 2%;
 }
 
 .dashboard-container .amount-of {
 	background-color: #fff;
-	color: #08548b;
+	color: #08548c;
 	border-radius: 3px;
 	padding: 0px 5px 0px 5px;
 	font-size: 1rem;
@@ -152,16 +151,18 @@
 }
 
 .dashboard-container .real-table-container {
-	height: 90%;
+	height: 100%;
 }
 
 .dashboard-container .styled_table {
-    border-collapse: collapse;
+    /* border-collapse: collapse; */
     background-color: white;
     font-size: 0.9em;
-
     min-width: 350px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+	height: 100%;
+	border-radius: 0 0 5px 5px;
+	padding: 0 1% 1% 1%;
 }
 
 .styled_table tbody {
@@ -174,7 +175,6 @@
 
 .styled_table thead th,
 .styled_table tbody td {
-    padding: 2px 0 5px 5px;
 	font-size: 0.7rem;
 }
 

@@ -11,20 +11,25 @@ export const OperationsDashboardManager = ({ title }) => {
 			</div>
 			<div className="data-container">
 				<div className="cards-container">
-					{/* {arrCards.map((card, index) => (
-						<CardDashboard title={'Late pending'} key={`${index}-index`} />
-					))} */}
-					<CardDashboard title={'Late Reports'} includesGraphic/>
-					<CardDashboard title={'Late Pending'} includesGraphic/>
-					<CardDashboard title={'Processing'}/>
-					<CardDashboard title={'Unable To Contact'} includesGraphic/>
-					<CardDashboard title={'Quality Control'} includesGraphic/>
-					<CardDashboard title={"Today's Booked jobs"}/>
+					<div style={{ width: '50%', display: 'flex', justifyContent: 'space-evenly', marginBottom: '0.5%' }}>
+						<CardDashboard title={'Late Reports'} includesGraphic/>
+						<CardDashboard title={'Late Pending'} includesGraphic/>
+						<CardDashboard title={'Processing'}/>	
+					</div>
+					<div style={{ width: '50%', display: 'flex', paddingBottom: '0.5%' }}>
+						<TableDashboard tableTitle={'Unallocated Jobs'} extendScreen/>
+					</div>
 				</div>
-				<div className="tables-container">
-					{/* TODO pasar por props la data a cada tabla */}
-					<TableDashboard tableTitle={'Unallocated Jobs'} extendScreen/>
-					<TableDashboard tableTitle={'Recently Viewed Jobs'}/>
+				<div className="cards-container">
+					<div style={{ width: '50%', display: 'flex', justifyContent: 'space-evenly', marginTop: '0.5%' }}>
+						<CardDashboard title={'Unable To Contact'} includesGraphic/>
+						<CardDashboard title={'Quality Control'} includesGraphic/>
+						<CardDashboard title={"Today's Booked jobs"}/>
+					</div>
+					<div style={{ width: '50%', display: 'flex', paddingTop: '0.5%' }}>
+						<TableDashboard tableTitle={'Recently Viewed Jobs'}/>
+					</div>
+
 				</div>
 			</div>
 		</div>

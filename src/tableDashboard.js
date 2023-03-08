@@ -4,7 +4,7 @@ export const TableDashboard = ({tableTitle, extendScreen}) => {
 	const heading = ['Client', 'Requested Date', 'Address', 'Job Type']
 	const firstFiveEntries = fakeData.slice(0, 5);
 	return (
-		<div className='table-container'>
+		<div style={{ display: 'flex', flexDirection: 'column', height: '100%' }}>
 			<div className='table-header'>
 				<div className='table_header__title'>{tableTitle}</div>
 				{ extendScreen && (
