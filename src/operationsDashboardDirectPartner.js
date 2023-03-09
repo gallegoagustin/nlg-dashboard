@@ -18,7 +18,7 @@ export const OperationsDashboardDirectPartner = ({ title, data, userId }) => {
 						<CardDashboard title={'Late Pending'} includesGraphic/>	
 					</div>
 					<div style={{ width: '50%', display: 'flex', paddingBottom: '0.5%' }}>
-						<TableDashboard tableTitle={'All Unasigned Jobs'} extendScreen filterFunction={getJobsFilteredByClerk} counterFunction={getUnassignedJobsCounter} data={data} userId={userId} />
+						<TableDashboard tableTitle={'All Unassigned Jobs'} extendScreen filterFunction={getJobsFilteredByClerk} counterFunction={getUnassignedJobsCounter} data={data} userId={userId} />
 					</div>
 				</div>
 				<div className="cards-container">
