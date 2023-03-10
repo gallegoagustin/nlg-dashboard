@@ -1,3 +1,4 @@
+@import url('./assets/fonts/fonts.css');
 #dashboardContainer {
 	height: 100%;
 	width: 100%;
@@ -39,7 +40,7 @@
 }
 
 #dashboardContainer .screen-title {
-	font-family: news-gothic-std, sans-serif;
+	font-family: 'news-gothic-std', sans-serif;
 	font-size: 20px;
 	margin-left: 1%;
 }

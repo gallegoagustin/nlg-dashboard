@@ -35,7 +35,7 @@ export const LineChart = () => {
         return {
             datasets: [
                 {
-                    label: 'Data',
+                    label: '',
                     data: scores,
                     tension: 0.3,
                 },

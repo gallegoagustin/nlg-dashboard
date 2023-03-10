@@ -1,0 +1,24 @@
+/* @font-face {
+    font-family: "arboria";
+    src: url('./Arboria-Medium.otf');
+    font-weight: normal;
+} */
+
+@font-face {
+    font-family: "arboria";
+    src: url('./Arboria-Medium.ttf');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "arboria";
+    src: url('./Arboria-Bold.ttf');
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: "news-gothic-std";
+    src: url('./News_Bold.ttf');
+    font-weight: bold;
+}
+
