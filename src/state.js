@@ -3,6 +3,7 @@ export const initialState = {
     isLoading: false,
     dateRange: undefined,
     userId: 54,
+    production: false,
 };
   
 export const reducer = (state, action) => {

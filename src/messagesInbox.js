@@ -1,16 +1,17 @@
-import { fakeData } from './data'
+import React from 'preact/compat';
+import { fakeData } from './data';
 import { Message } from './message';
 import { useState } from 'preact/hooks';
 
 export const MessagesInbox = ({tableTitle}) => {
-	const heading = ['Date', 'Subject:', 'Job Address:', 'Sender:']
-	const firstFiveEntries = fakeData.slice(0, 5);
+    const heading = ['Date', 'Subject:', 'Job Address:', 'Sender:'];
+    const firstFiveEntries = fakeData.slice(0, 5);
     const [showReadOnly, setShowReadOnly] = useState(false);
     const onReadOnly = () => {
         setShowReadOnly(!showReadOnly);
-    }
-	return (
-		<div className='table-container'>
+    };
+    return (
+        <div className='table-container'>
             <div className='table-header'>
                 <h1 className='table_header__title'>{tableTitle}</h1>
                 <h1 className='total-messages'>Total messages: 99</h1>
@@ -53,7 +54,7 @@ export const MessagesInbox = ({tableTitle}) => {
                     <img className='arrows' src='./assets/arrow-right.svg' alt='right'/>
                 </div>
             </div>
-		</div>
-	)
-}
-1
+        </div>
+    );
+};
+1;

@@ -1,4 +1,3 @@
-import App from './container';
-import './index.css';
+import App from './container.js';
 
 export default App;

@@ -1,50 +1,55 @@
+import React from 'preact/compat';
 import { useMemo } from 'preact/hooks';
 
 export const TableDashboard = ({tableTitle, extendScreen, filterFunction, counterFunction, data, userId}) => {
-	const heading = ['Client', 'Requested Date', 'Address', 'Job Type']
+    const heading = ['Client', 'Requested Date', 'Address', 'Job Type'];
 
-	const filteredData = useMemo(() => {
-		if (filterFunction) return filterFunction(data, userId);
-		else return [];
-	}, [data])
+    const filteredData = useMemo(() => {
+        if (filterFunction) return filterFunction(data, userId);
+        else return [];
+    }, [data]);
 
-	const counterData = useMemo(() => {
-		if (counterFunction) return counterFunction(data);
-		else return null;
-	}, [data])
+    const counterData = useMemo(() => {
+        if (counterFunction) return counterFunction(data);
+        else return null;
+    }, [data]);
 
-	return (
-		<div style={{ display: 'flex', flexDirection: 'column', height: '100%', width: '100%' }}>
-			<div className='table-header'>
-				<h1 className='table_header__title'>{tableTitle}</h1>
-				{ extendScreen && (
-					<div className='table-header-full-screen'>
-						<h1 className='amount-of'>{counterData}</h1>
-						<img className='fullscreen-svg' src='./assets/fullscreen.svg' alt='view-full-screen'/>
-					</div>
-				)}
-			</div>
-			<div className='real-table-container'>
-				<table className='styled_table'>
-					<thead>
-						<tr>
-							{heading.map((row, index) => (
-								<th key={`${index}-row`}>{row}</th>
-							))}
-						</tr>
-					</thead>
-					<tbody>
-						{filteredData.map((row, index) => (
-							<tr key={`${index}-row`}>
-								<td style={{ width: '15%' }}>{row.organization}</td>
-								<td style={{ width: '15%' }}>{row.requested_date}</td>
-								<td style={{ width: '50%' }}>{row.address}</td>
-								<td style={{ width: '20%' }}>{row.job_type}</td>
-							</tr>
-						))}
-					</tbody>
-				</table>
-			</div>
-		</div>
-	)
-}
+    return (
+        <div style={{ display: 'flex', flexDirection: 'column', height: '100%', width: '100%' }}>
+            <div className='table-header'>
+                <h1 className='table_header__title'>{tableTitle}</h1>
+                { extendScreen && (
+                    <div className='table-header-full-screen'>
+                        <h1 className='amount-of'>{counterData}</h1>
+                        <img className='fullscreen-svg' src='./assets/fullscreen.svg' alt='view-full-screen'/>
+                    </div>
+                )}
+            </div>
+            <div className='real-table-container' style={{ padding: '1% 2%', fontSize: '0.8rem' }}>
+                <div style={{width: '100%', display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1%'}}>
+                    <div style={{width: '100%', display: 'flex', justifyContent: 'space-between'}}>
+                        <div style={{width: '100%', display: 'flex', justifyContent: 'space-between', alignItems: 'center'}}>
+                            <span style={{ width: '15%' }}>{heading[0]}</span>
+                            <span style={{ width: '15%' }}>{heading[1]}</span>
+                            <span style={{ width: '50%' }}>{heading[2]}</span>
+                            <span style={{ width: '20%' }}>{heading[3]}</span>
+                        </div>
+                    </div>
+                </div>
+                <div style={{width: '100%'}}>
+                    {filteredData.map((row, index) => (
+                        <div style={{width: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', marginTop: '0.5%'}}>
+                            <div key={`${index}-row`} style={{width: '100%', display: 'flex', justifyContent: 'space-between', alignItems: 'center', paddingBottom: '0.5%'}}>
+                                <span style={{ width: '15%', color: '#9FA2A3' }}>{row.organization_name}</span>
+                                <span style={{ width: '15%', color: '#9FA2A3' }}>{row.requested_date}</span>
+                                <span style={{ width: '50%', color: '#9FA2A3' }}>{row.address}</span>
+                                <span style={{ width: '20%', color: '#9FA2A3' }}>{row.job_type}</span>
+                            </div>
+                            {index !== filteredData.length - 1 && <div style={{width: '100%', height: '1px', borderBottom: '1px solid #bcbcbc'}}></div>}
+                        </div>
+                    ))}
+                </div>
+            </div>
+        </div>
+    );
+};
