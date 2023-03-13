@@ -89,6 +89,7 @@
 	height: auto;
 	width: 30%;
     cursor: pointer;
+	font-family: sans-serif;
 }
 
 #dashboardContainer .cardWrapper:hover {
@@ -433,3 +434,22 @@
 	height: 15px;
 }
 
+#dashboardContainer .add-button {
+    line-height: 1.214;
+    padding: 0.714rem 1.429rem;
+    border: 0;
+    border-radius: 0.3rem;
+    background-color: #00548c;
+    color: #fff;
+    font-family: 'news-gothic-std', sans-serif;
+    font-weight: 700;
+    cursor: pointer;
+    vertical-align: middle;
+    text-align: center;
+	text-decoration: none;
+}
+
+#dashboardContainer .add-button:visited {
+	text-decoration: none;
+    color: #fff;
+}

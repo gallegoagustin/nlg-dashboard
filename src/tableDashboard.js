@@ -50,10 +50,10 @@ export const TableDashboard = ({tableTitle, extendScreen, filterFunction, counte
                     {filteredData.map((row, index) => (
                         <div style={{width: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', marginTop: '0.5%'}}>
                             <div key={`${index}-row`} style={{width: '100%', display: 'flex', justifyContent: 'space-between', alignItems: 'center', paddingBottom: '0.5%'}}>
-                                <span style={{ width: '15%', color: '#9FA2A3' }}>{row.organization_name}</span>
-                                <span style={{ width: '15%', color: '#9FA2A3' }}>{row.requested_date ? formatDate(row.requested_date) : row.requested_date}</span>
-                                <span style={{ width: '50%', color: '#9FA2A3' }}>{row.address.split(',')[0]}, {row.address.split(',')[2]}</span>
-                                <span style={{ width: '20%', color: '#9FA2A3' }}>{row.job_type}</span>
+                                <span style={{ width: '15%', color: '#9FA2A3' }} title={row.organization_name}>{row.organization_name.length > 13 ? row.organization_name.slice(0, 13) + '...' : row.organization_name}</span>
+                                <span style={{ width: '15%', color: '#9FA2A3' }} title={row.requested_date}>{row.requested_date ? formatDate(row.requested_date) : row.requested_date}</span>
+                                <span style={{ width: '50%', color: '#9FA2A3' }} title={row.address}>{row.address.split(',')[0]}, {row.address.split(',')[2]}</span>
+                                <span style={{ width: '20%', color: '#9FA2A3' }} title={row.job_type}>{row.job_type.length > 13 ? row.job_type.slice(0, 13) + '...' : row.job_type}</span>
                             </div>
                             {index !== filteredData.length - 1 && <div style={{width: '100%', height: '1px', borderBottom: '1px solid #bcbcbc'}}></div>}
                         </div>

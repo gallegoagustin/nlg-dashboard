@@ -6,8 +6,9 @@ import { getJobsFilteredByPartner, getJobsSortedByViewDate, getUnallocatedJobsCo
 export const OperationsDashboardManager = ({ title, data, userId }) => {
     return (
         <div className='operations-container'>
-            <div className='title-container'>
+            <div className='title-container' style={{ width: '100%', display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 12 }}>
                 <h1 className='screen-title'>{title}</h1>
+                <a href={'https://uat.app.kaptursoftware.co.uk/jobs/create/'} className='add-button'>Add Job</a>
             </div>
             <div className="data-container">
                 <div className="cards-container">
