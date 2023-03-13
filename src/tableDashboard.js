@@ -52,7 +52,7 @@ export const TableDashboard = ({tableTitle, extendScreen, filterFunction, counte
                             <div key={`${index}-row`} style={{width: '100%', display: 'flex', justifyContent: 'space-between', alignItems: 'center', paddingBottom: '0.5%'}}>
                                 <span style={{ width: '15%', color: '#9FA2A3' }}>{row.organization_name}</span>
                                 <span style={{ width: '15%', color: '#9FA2A3' }}>{row.requested_date ? formatDate(row.requested_date) : row.requested_date}</span>
-                                <span style={{ width: '50%', color: '#9FA2A3' }}>{row.address.split(',')[0]}, {row.address.split(',')[1]}, {row.address.split(',')[2]}</span>
+                                <span style={{ width: '50%', color: '#9FA2A3' }}>{row.address.split(',')[0]}, {row.address.split(',')[2]}</span>
                                 <span style={{ width: '20%', color: '#9FA2A3' }}>{row.job_type}</span>
                             </div>
                             {index !== filteredData.length - 1 && <div style={{width: '100%', height: '1px', borderBottom: '1px solid #bcbcbc'}}></div>}
